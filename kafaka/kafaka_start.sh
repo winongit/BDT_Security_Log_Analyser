@@ -1,0 +1,1 @@
+kafka-server-start /opt/homebrew/etc/kafka/kraft/server.properties

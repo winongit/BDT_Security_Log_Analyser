@@ -1,0 +1,10 @@
+CREATE EXTERNAL TABLE security_logs_hive (
+  timestamp STRING,
+  log_type STRING,
+  source_ip STRING,
+  user STRING,
+  action_taken STRING
+)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,security_events:log_type,security_events:source_ip,security_events:user,security_events:action_taken")
+TBLPROPERTIES ("hbase.table.name" = "security_logs");

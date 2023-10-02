@@ -1,0 +1,1 @@
+kafka-topics --bootstrap-server 192.168.1.66:9092 --topic security_logs_stream --create
